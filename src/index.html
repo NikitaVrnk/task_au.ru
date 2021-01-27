@@ -1,112 +1,130 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>au.ru frontend</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
     <div class="registration">
         <div class="container">
             <form action="#">
-                <div class="username">
-                    <div class="hello">Здравствуйте,&nbsp;</div>
-                    <div class="who">
-                        <div class="change-name">
-                            <div class="random-name" id="randomname">Человек №1213454</div>
-                            <div class="change-status" id="status">Сменить статус</div>
+                <div class="wrapper username">
+                    <div class="row">
+                        <div class="col-1">
+                            <label class="label-text">Здравствуйте,&nbsp;</label>
                         </div>
-                        <div class="input-name">
-                            <label for="username"></label>
-                            <input type="text" id="username" name="usrname"
-                                placeholder="Прежде чем действовать надо понять" required>
+                        <div class="col-2 col-2_big">
+                            <div class="who">
+                                <div class="change-name">
+                                    <div class="random-name" id="randomname">Человек №1213454</div>
+                                    <div class="change-status" id="status">Сменить статус</div>
+                                </div>
+                                <div class="input-name">
+                                    <label for="username"></label>
+                                    <input type="text" id="username" name="usrname"
+                                        placeholder="Прежде чем действовать надо понять" required>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="youcity">
-                    <label class="descinput main-text" for="city">Ваш город</label>
-                    <select class="city" name="" id="city">
-                        <option value="Красноярск">Красноярск</option>
-                        <option value="Москва">Москва</option>
-                    </select>
+                <div class="wrapper city">
+                    <div class="row">
+                        <div class="col-1">
+                            <label class="label-text" for="city">Ваш город</label>
+                        </div>
+                        <div class="col-2">
+                            <select class="city-select" name="" id="city">
+                                <option value="Красноярск">Красноярск</option>
+                                <option value="Москва">Москва</option>
+                            </select>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
                 </div>
+
                 <hr class="line">
 
-                <div class="password">
-                    <div class="password-new">
-                        <!-- <div class="password-text"> -->
-                        <label class="main-text descinput" for="psw">Пароль</label>
-                        <!-- </div> -->
-                        <div class="password-input">
+                <div class="wrapper password-input">
+                    <div class="row">
+                        <div class="col-1">
+                            <label class="label-text" for="psw">Пароль</label>
+                        </div>
+                        <div class="col-2">
                             <input required type="password" title="цифры от 0-9 и буквы латинского алфавита" name="psw"
                                 id="psw" pattern="[a-zA-Z0-9]{5,}">
                             <div id="error1" class="error">Укажите пароль</div>
-
                         </div>
-
-
-                        <div class="password-prompt">
+                        <div class="col-3">
                             <span class="fz12text">Ваш новый пароль должен содержать не менее 5 символов.</span>
                         </div>
-
                     </div>
+                </div>
 
-                    <div class="password-repeat">
-                        <!-- <div class="password-text"> -->
-                        <label class="main-text descinput" for="psw-repeat">Пароль еще раз</label>
-                        <!-- </div> -->
-                        <div class="password-input">
+                <div class="wrapper password-repeat">
+                    <div class="row">
+                        <div class="col-1">
+                            <label class="label-text" for="psw-repeat">Пароль еще раз</label>
+                        </div>
+                        <div class="col-2">
                             <input required type="password" name="psw-repeat" id="psw-repeat"
                                 title="цифры от 0-9 и буквы латинского алфавита" pattern="[a-zA-Z0-9]{5,}">
                             <div id="error2" class="error">Укажите пароль</div>
                         </div>
-                        <div class="password-prompt">
+                        <div class="col-3">
                             <span class="fz12text">Повторите пароль, пожалуйста, это обезопасит вас с нами
                                 на случай ошибки.</span>
                         </div>
                     </div>
-                    <hr class="line">
+                </div>
 
-                    <div class="you-email">
-                        <!-- <div class="email-text"> -->
-                        <label class="main-text descinput" for="email">Электронная почта</label>
-                        <!-- </div> -->
-                        <div class="email-input">
+                <hr class="line">
+
+                <div class="wrapper email">
+                    <div class="row">
+                        <div class="col-1">
+                            <label class="label-text" for="email">Электронная почта</label>
+                        </div>
+                        <div class="col-2">
                             <input type="email" name="email" id="email" required>
                             <div id="error3" class="error">Укажите email</div>
                         </div>
-                        <div class="email-prompt">
+                        <div class="col-3">
                             <span class="fz12text">Можно изменить адрес указанный при регистрации</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="subscribe">
-                        <label for="subscribe" class="main-text descinput">Я согласен</label>
-
-                        <div class="checked" name="" id="">
-                            <input type="checkbox" checked="checked" name="subscribe">
+                <div class="wrapper subscription">
+                    <div class="row">
+                        <div class="col-1">
+                            <label class="label-text" for="subscribe">Я согласен</label>
+                        </div>
+                        <div class="col-2 col-2_big">
+                            <input class="checked" type="checkbox" checked="checked" name="subscribe">
                             <span class="agreement">принимать актуальную информацию на емейл</span>
                         </div>
                     </div>
-                    <div class="btn">
-                        <button type="submit" value="Submit" class="registerbtn" id="btn">Изменить</button>
-                        <div class="last-changes"><span>последние изменения 15 мая 2012 в 14:55:17</span></div>
-                        <div id="time">dateCreate(TEST)</div>
+                </div>
+
+                <div class="wrapper button">
+                    <div class="row">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-2 col-2_big btn">
+                            <button type="submit" value="Submit" class="registerbtn" id="btn">Изменить</button>
+                            <div class="last-changes"><span>последние изменения 15 мая 2012 в 14:55:17</span></div>
+                        </div>
                     </div>
                 </div>
             </form>
-
-
         </div>
     </div>
-
-
-
     <script src="js/script.js"></script>
 </body>
 
